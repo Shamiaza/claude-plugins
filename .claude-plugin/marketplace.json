@@ -37,6 +37,16 @@
       },
       "source": "./plugins/nestjs-dev",
       "category": "development"
+    },
+    {
+      "name": "context-management",
+      "description": "Context gathering, documentation, and knowledge management agents for comprehensive codebase analysis",
+      "version": "1.0.0",
+      "author": {
+        "name": "Shamiaza"
+      },
+      "source": "./plugins/context-management",
+      "category": "development"
     }
   ]
 }

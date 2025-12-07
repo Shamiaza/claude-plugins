@@ -1,0 +1,8 @@
+{
+  "name": "context-management",
+  "version": "1.0.0",
+  "description": "Context gathering, documentation, and knowledge management agents for comprehensive codebase analysis",
+  "author": {
+    "name": "Shamiaza"
+  }
+}

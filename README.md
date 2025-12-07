@@ -31,6 +31,17 @@ NestJS backend development toolkit:
 **Agents**: nestjs-backend-architect
 **Commands**: /nestjs-dev:execute-task, /nestjs-dev:complete-workflow
 
+### context-management
+Context and knowledge management toolkit:
+- Deep codebase analysis and research
+- Documentation writing and updates
+- CLAUDE.md knowledge persistence
+- Dependency mapping and flow analysis
+- Architecture investigation and documentation
+
+**Agents**: context-gatherer, doc-updater, memory-updater, flow-analyst, architecture-investigator
+**Commands**: /context-management:gather
+
 ## Installation
 
 ```bash
