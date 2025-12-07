@@ -3,49 +3,11 @@
   "hooks": {
     "PreToolUse": [
       {
-        "matcher": {
-          "tool_name": "Edit"
-        },
+        "matcher": "Edit|Write|MultiEdit|NotebookEdit",
         "hooks": [
           {
             "type": "command",
-            "command": "echo '🚫 ORCHESTRATOR MODE: Direct edits are blocked. Use Task tool with an agent instead.' && exit 1",
-            "timeout": 5
-          }
-        ]
-      },
-      {
-        "matcher": {
-          "tool_name": "Write"
-        },
-        "hooks": [
-          {
-            "type": "command",
-            "command": "echo '🚫 ORCHESTRATOR MODE: Direct writes are blocked. Use Task tool with an agent instead.' && exit 1",
-            "timeout": 5
-          }
-        ]
-      },
-      {
-        "matcher": {
-          "tool_name": "MultiEdit"
-        },
-        "hooks": [
-          {
-            "type": "command",
-            "command": "echo '🚫 ORCHESTRATOR MODE: Direct multi-edits are blocked. Use Task tool with an agent instead.' && exit 1",
-            "timeout": 5
-          }
-        ]
-      },
-      {
-        "matcher": {
-          "tool_name": "NotebookEdit"
-        },
-        "hooks": [
-          {
-            "type": "command",
-            "command": "echo '🚫 ORCHESTRATOR MODE: Direct notebook edits are blocked. Use Task tool with an agent instead.' && exit 1",
+            "command": "echo '🚫 ORCHESTRATOR MODE: Direct file edits are blocked. Use Task tool with an agent (e.g., general-purpose, react-senior-dev) instead.' >&2 && exit 1",
             "timeout": 5
           }
         ]
