@@ -57,6 +57,16 @@
       },
       "source": "./plugins/orchestrator-mode",
       "category": "productivity"
+    },
+    {
+      "name": "rule-creator",
+      "description": "Agent and command for creating and managing Claude rules files in .claude/rules/ with path-scoping and modular organization",
+      "version": "1.0.0",
+      "author": {
+        "name": "Shamiaza"
+      },
+      "source": "./plugins/rule-creator",
+      "category": "productivity"
     }
   ]
 }
