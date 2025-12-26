@@ -1,0 +1,17 @@
+{
+  "description": "Non-blocking reminder to sync memory after significant edits",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '\n💡 Memory tip: If you changed architecture/patterns, consider /project-memory:sync'",
+            "timeout": 3
+          }
+        ]
+      }
+    ]
+  }
+}
