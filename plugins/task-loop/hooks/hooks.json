@@ -1,0 +1,27 @@
+{
+  "description": "Task-loop hooks for session context and progress reminders",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Read",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ -f .claude/current-task.md ] && head -1 .claude/current-task.md | grep -q 'task_file' && echo '\n📋 Active task detected. Run: cat .claude/current-task.md to see current task context' || true",
+            "timeout": 3
+          }
+        ]
+      },
+      {
+        "matcher": "Task",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ -f .claude/current-task.md ] && PROGRESS=$(grep 'progress_file:' .claude/current-task.md | sed 's/.*: \"\\(.*\\)\"/\\1/' | tr -d '\"') && echo \"\n📝 Reminder: Update progress file ($PROGRESS) with current status\" || true",
+            "timeout": 3
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -51,6 +51,37 @@ Enforces the orchestrator pattern for cleaner context management:
 **Hooks**: PreToolUse (Edit, Write, MultiEdit)
 **Commands**: None (passive hook only)
 
+### project-memory
+Comprehensive project memory management:
+- Initialize memory structure with standard directories
+- Log session notes and discoveries
+- Sync memory after architectural changes
+- Periodic review and maintenance
+
+**Agents**: architecture-watcher, memory-organizer, memory-reviewer, session-logger
+**Commands**: /project-memory:init, /project-memory:log, /project-memory:sync, /project-memory:organize, /project-memory:review
+
+### rule-creator
+Create and manage Claude rules files:
+- Create new rule files in .claude/rules/
+- Organize rules into subdirectories
+- Set up path-specific rules with frontmatter
+
+**Agents**: rule-creator
+**Commands**: /rule-creator:create-rule
+
+### task-loop
+Long-running task execution with agent orchestration:
+- Autonomous task execution across multiple sessions
+- Spawns specialized agents per task step
+- Progress tracking with checkpoint/resume support
+- Code review after each implementation
+- Session continuity via current-task.md
+
+**Agents**: Uses existing framework agents (react, flutter, nestjs, angular)
+**Commands**: /task-loop:loop, /task-loop:clear-task
+**Hooks**: PostToolUse (session context, progress reminders)
+
 ## Installation
 
 ```bash
